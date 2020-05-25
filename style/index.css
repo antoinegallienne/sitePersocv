@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: 'Quintessential-Regular';
+    src: url('font/Quintessential-Regular.ttf');
+}
+@font-face {
+    font-family: 'NotoMono-Regular';
+    src: url('font/NotoMono-Regular.ttf');
+}
+body
+{
+    background-image: url('../img/haie.jpg');/*image de 900x 500 */
+    background-attachment: fixed;
+   /* background-size: auto;*/
+}
+
+/* -----------------   Page index  -----------------*/
+.body{
+    display:flex;
+    margin: auto;
+	/*
+    width: 800;
+    min-width: 500px;
+    max-width: 900px;*/
+}
+
+/*------------- Menu nav ------------------*/
+
+.nav{
+    width: 100%;
+	margin: 0px auto 40px auto;
+    background-color: rgba(0,0,0,0); /* menu transparent */
+    position: sticky;
+    top: 50px;
+}
+nav ul{
+	display: flex;
+    list-style-type: none; /* suprime les puces */
+}
+
+nav li{
+    width: 33%; /*100% divisé par 3 */
+    text-align: center;
+
+}
+
+nav a{
+    font-size: 30px;
+    display: block;  /*Toute la surface cliquable*/
+    text-decoration: none;
+    color: rgb(120,190,130); /* texte en vert */
+    padding: 20px 0 0 0;
+}
+
+nav a:hover{
+    color: white;
+}
+
+ -----------------  pour les écrans de moins de 790 px -------------*/
+
+@media all and (max-width: 790px) 
+{
+	   
+		.nav{
+			width: 100%;
+			margin:  auto 40px auto;
+			background-color: rgba(0,0,0,0); /* menu transparent */
+			position: sticky;
+			top: 50px;
+			}
+   
+		nav ul{
+			flex-direction: column;
+			}
+			
+		nav li{
+			width: 33%; /*100% divisé par 3 */
+			text-align: center;
+			}
+
+		nav a{
+			font-size: 30px;
+			display: block;  /*Toute la surface cliquable*/
+			text-decoration: none;
+			color: rgb(100,160,130); /* texte en vert */
+			padding: 20px 0 0 0;
+		}
+
+		nav a:hover{
+			color: white;
+		}
+	
+
+}
