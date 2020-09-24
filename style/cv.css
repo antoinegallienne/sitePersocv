@@ -1,0 +1,288 @@
+
+
+@font-face {
+    font-family: 'noto_monoregular';
+    src: url('../font/notomono-regular-webfont.woff') format('woff'),
+    url('../font/notomono-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../font/Louis George Cafe.ttf') format('truetype'),
+    url('../font/Louis George Cafe Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+header {
+    padding: 3.6vh 0 8vh 5vw;
+}
+header h1 {
+    font-size: 2.5rem;
+    color: beige;
+    font-family: 'Louis George Cafe';
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+h1 span {
+    font-size: 2.3rem;
+    color: #309067; /* Antoine en vert */
+}
+header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+main a{
+    color: beige;
+    text-decoration: none;
+}
+main a:hover {
+    color: #E6E6E6; /* gris claire */
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    color: beige;
+    background-image: url('../img/haie.jpg');/*image de 900x 500 */
+    width: 100%;
+    overflow: auto;
+}
+
+main h3{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #509067;
+    text-align: center;
+    padding: 2vh 0 2vh 0;
+    background-image: url('../img/haie.jpg');
+}
+
+.contact,
+.adresse,
+.telephone,
+.mail{
+    font-size: 1.1rem;
+    margin: 0 2vw 2vh 5vw;
+}
+
+main p {
+    font-size: 1.1rem;
+    margin: 0 2vw 2vh 5vw;
+}
+
+.apropos p {
+    margin: 2vh 2vw 0 2vw;
+}
+
+/* --------------  Loisir  ----------------
+------------------------------------------*/
+
+.apropos{
+    background-color: #010501;
+    color: #E6E6E6;
+}
+
+.apropos h3{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #509067;
+    text-align: center;
+    padding: 2vh 0 2vh 0;
+    background-image: url('../img/haie.jpg');
+}
+.apropos p {
+    margin: 2vh 2vw 0 2vw;
+}
+
+/* ------------- section formation/experience ---------*/
+
+.parcours {
+    background-color: #E5E9E6;
+}
+
+
+/*
+.experience li,
+.formation li {
+    display: flex;
+    flex-direction: row;
+    list-style-image: url("../img/ipuce.png");
+    padding: 0 0 0 0;
+}
+
+.experience h2,
+.formation h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 3vh 2vw 0 1.5vw;
+    margin:  0 3vh 0 6vh;
+    border-bottom: solid #386057;
+}
+
+.formation h2 {
+    padding: 3vh 3vw 0 0;
+}
+.experience i,
+.formation i {
+    color: #388857;
+    padding: 0 4.5vw 0 0 ;
+}
+
+.experience h3,
+.formation h3 {
+    font-size: 1.2rem;
+    padding: 0 0 0 0;
+    margin: 0;
+}
+
+
+.experience h4,
+.formation h4 {
+    font-family: 'Louis George Cafe';
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 0 0 0 5vw;
+    margin: 0;
+    font-weight: normal;
+}
+.experience h5,
+.formation h5 {
+    font-family: 'Louis George Cafe';
+    font-size: 1.1rem;
+    padding: 1vh 0 1vh 5vw;
+    margin: 0;
+    font-weight: normal;
+}
+.experience p,
+.formation p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0 5vw 4vh 5vw;
+}
+
+address span {
+    text-transform: uppercase;
+}
+
+
+ */
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+    body{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: auto;
+    }
+    .apropos{
+        width: 40%;
+    }
+    main {
+        width: 45%;
+    }
+    .parcours {
+        width: 75%;
+        height: 100vh;
+        overflow: auto;
+    }
+    .apropos {
+        order: -1;
+    }
+
+
+    /* ------------- main formation/experience ---------*/
+/*
+    header {
+        padding: 5vh 0 5vh 2vw;
+    }
+    address{
+        font-size: 1.1rem;
+        margin: 0 2vw 5vh 2vw;
+    }
+    .experience i,
+    .formation i {
+        color: #388857;
+        padding: 0 1vw 0 0 ;
+    }
+    .experience h2,
+    .formation h2 {
+        font-size: 1.2rem;
+        padding: 0 0 0 0;
+        margin: 0;
+
+    }
+
+    .experience h3,
+    .formation h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0 0 0 1vw;
+        margin: 0;
+
+
+    }
+    .experience h4,
+    .formation h4 {
+        font-family: 'Louis George Cafe';
+        font-size: 1.1rem;
+        padding: 0 0 1vh 2vw;
+        margin: 0;
+        font-weight: normal;
+    }
+    .experience h5,
+    .formation h5 {
+        font-family: 'Louis George Cafe';
+        font-size: 1.1rem;
+        padding: 1vh 0 1vh 2vw;
+        margin: 0;
+        font-weight: normal;
+    }
+    .experience p,
+    .formation p {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0 1vw 1vh 2vw;
+    }
+    .apropos p {
+        margin: 3vh 2vw 0 2vw;
+    }
+}
+
+/*  -----------------  pour les grands écrans 1200px      ------------------------*/
+/* -------------------------------------------------------------------------------*/
+/*
+@media screen and (min-width: 1200px) {
+
+    body{
+        display: flex;
+        max-width: 80%;
+        margin: auto;
+    }
+    main {
+        width: 60%;
+    }
+
+
+    .apropos p {
+        margin: 3vh 5vw 0 3vw;
+    }
+    */
+}

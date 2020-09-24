@@ -1,3 +1,31 @@
+@keyframes shake {
+	
+	
+ 20% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+.bounceOut {
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  animation-name: bounceOut;
+
+}
+
+
+
+
 
 @font-face {
     font-family: 'Quintessential-Regular';
@@ -7,88 +35,51 @@
     font-family: 'NotoMono-Regular';
     src: url('font/NotoMono-Regular.ttf');
 }
-body
-{
-    background-image: url('../img/haie.jpg');/*image de 900x 500 */
+
+body{
+	background-image: url('../img/haie.jpg');
     background-attachment: fixed;
-   /* background-size: auto;*/
 }
 
-/* -----------------   Page index  -----------------*/
-.body{
-    display:flex;
-    margin: auto;
-	/*
-    width: 800;
-    min-width: 500px;
-    max-width: 900px;*/
-}
+nav{
 
-/*------------- Menu nav ------------------*/
-
-.nav{
-    width: 100%;
-	margin: 0px auto 40px auto;
-    background-color: rgba(0,0,0,0); /* menu transparent */
-    position: sticky;
-    top: 50px;
 }
 nav ul{
-	display: flex;
-    list-style-type: none; /* suprime les puces */
+	display:flex;
+	flex-direction: column;
+	width:90%;
+	}             
+nav li {
+	display:block;
 }
-
-nav li{
-    width: 33%; /*100% divisé par 3 */
-    text-align: center;
-
-}
-
 nav a{
-    font-size: 30px;
-    display: block;  /*Toute la surface cliquable*/
-    text-decoration: none;
-    color: rgb(120,190,130); /* texte en vert */
-    padding: 20px 0 0 0;
+	color: #576D2E;
+	font-size: 2rem;
 }
-
 nav a:hover{
     color: white;
 }
 
- -----------------  pour les écrans de moins de 790 px -------------*/
+main h2{
+	color:none;
+	width:10%;
+	padding: 0 0 0 30vw;
+}
+h2:hover{
+		color:white;
+	animation: shake 1s;
 
-@media all and (max-width: 790px) 
-{
-	   
-		.nav{
-			width: 100%;
-			margin:  auto 40px auto;
-			background-color: rgba(0,0,0,0); /* menu transparent */
-			position: sticky;
-			top: 50px;
-			}
-   
-		nav ul{
-			flex-direction: column;
-			}
-			
-		nav li{
-			width: 33%; /*100% divisé par 3 */
-			text-align: center;
-			}
+}
+footer{
+}
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
 
-		nav a{
-			font-size: 30px;
-			display: block;  /*Toute la surface cliquable*/
-			text-decoration: none;
-			color: rgb(100,160,130); /* texte en vert */
-			padding: 20px 0 0 0;
-		}
+@media screen and (min-width: 768px) {
 
-		nav a:hover{
-			color: white;
-		}
-	
-
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		width: 90%;
+	}
 }
