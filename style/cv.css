@@ -55,7 +55,7 @@ main{
     display: flex;
     flex-direction: column;
     color: beige;
-    background-image: url('../img/haie.jpg');/*image de 900x 500 */
+    background-image: url('../img/haie.webp');
     width: 100%;
     overflow: auto;
 }
@@ -67,7 +67,7 @@ main h3{
     color: #509067;
     text-align: center;
     padding: 2vh 0 2vh 0;
-    background-image: url('../img/haie.jpg');
+    background-image: url('../img/haie.webp');
 }
 
 .contact,
@@ -203,6 +203,7 @@ address span {
         height: 100vh;
         overflow: auto;
     }
+
     .apropos {
         order: -1;
     }
