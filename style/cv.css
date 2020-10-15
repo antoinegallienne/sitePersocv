@@ -27,7 +27,7 @@ main{
     display: flex;
     flex-direction: column;
     color: beige;
-    background-image: url('../img/haie.webp');
+    background-image: url('../img/haiecv.webp');
     width: 100%;
     height: auto;
     overflow: auto;
@@ -121,26 +121,72 @@ figure{
     padding: 2vh 0 2vh 2vw;
 }
 
-.loisir p {
+.loisir p{
     color: beige;
-    margin: 2vh 2vw 40vh 2vw;
+    margin: 2vh 2vw 4vh 2vw;
     font-size: 1rem;
 }
 
+/*------------------ liste-loisir -----------------------------*/
 
+.liste-loisir ul {
+    list-style-type: none;
+}
 
+p[class*='impression'],
+p[class*='jardinage'],
+p[class*='marche'],
+p[class*='moto'],
+p[class*='cuisine'],
+p[class*='photo'],
+p[class*='dessin'] {
+    position: relative;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #509067;
+}
+
+p[class*='impression']{
+    left:16vw;
+    bottom:40px;
+}
+p[class*='jardinage']{
+    left:0;
+    bottom:30px;
+}
+p[class*='marche']{
+    left:55vw;
+    bottom:10px;
+}
+p[class*='moto']{
+    left:40vw;
+}
+p[class*='cuisine']{
+    left:25vw;
+    bottom:15px;
+}
+p[class*='photo']{
+    left:50vw;
+    bottom:10px;
+}
+p[class*='dessin']{
+    left:10vw;
+    top:20px;
+}
 /* ------------- section formation/experience ---------*/
 
 .parcours {
     color: #223;
     background-color: #E6EAE7;
     height: auto;
+    overflow:scroll;
 }
 
 .parcours h2{
     font-family: 'ModernSans-Light';
     font-size: 2rem;
-    margin: 8vh 2vw 5vh 2vw;
+    margin: 7vh 2vw 5vh 2vw;
 }
 .parcours h3{
     box-sizing: content-box;
@@ -163,11 +209,14 @@ figure{
     border-left: solid #222 3px;
 }
 
+
+
 /*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
 /* -------------------------------------------------------------------------------*/
 
 
 @media screen and (min-width: 768px) {
+
 
     body{
         display: flex;
@@ -175,6 +224,7 @@ figure{
         flex-wrap: wrap;
         max-width: 100%;
         margin: auto;
+        border: solid red 2px;
     }
     .perso{
         width: 50%;
@@ -192,18 +242,42 @@ figure{
         order: -1;
     }
 
-    /*
-    .parcours {
-        order: -1;
+
+    p[class*='impression']{
+        left:16vw;
+        bottom:40px;
     }
-*/
+    p[class*='jardinage']{
+        left:15vw;
+        bottom:30px;
+    }
+    p[class*='marche']{
+        left:5vw;
+        bottom:10px;
+    }
+    p[class*='moto']{
+        left:4vw;
+    }
+    p[class*='cuisine']{
+        left:2vw;
+        bottom:15px;
+    }
+    p[class*='photo']{
+        left:5vw;
+        bottom:10px;
+    }
+    p[class*='dessin']{
+        left:10vw;
+        top:20px;
+    }
+
 }
 
-/*  -----------------  pour les écrans de 1200px  -------------*/
+/*  -----------------  pour les écrans de 900px  -------------*/
 /* -------------------------------------------------------------------------------*/
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
 
     body {
         display: flex;
@@ -211,23 +285,122 @@ figure{
         flex-wrap: nowrap;
         max-width: 100%;
         margin: auto;
+        border: solid yellow 2px;
     }
 
     .perso {
-        width: 35%;
+        width: 30%;
     }
 
     main {
-        width: 35%;
+        width: 30%;
     }
 
     .parcours {
-        width: 75%;
-        height: 100vh;
-        overflow: auto;
+        width: 40%;
+
+    }
+
+    /* liste loisir */
+
+    p[class*='impression'] {
+        left: 0px;
+        bottom: 40px;
+    }
+
+    p[class*='jardinage'] {
+        left: 20px;
+        bottom: 45px;
+    }
+
+    p[class*='marche'] {
+        left: 15px;
+        bottom: 70px;
+    }
+
+    p[class*='moto'] {
+        left: 110px;
+    }
+
+    p[class*='cuisine'] {
+        left: 100px;
+        bottom: 15px;
+    }
+
+    p[class*='photo'] {
+        left: 55px;
+        bottom: 5px;
+    }
+
+    p[class*='dessin'] {
+        left: 10px;
+        top: 20px;
+    }
+
+    /* -------------------------- */
+}
+
+/*  -----------------  pour les écrans de 1700px  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1700px) {
+
+    body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        margin: auto;
+        border: solid green 2px;
+    }
+
+    .perso {
+        width: 25%;
+    }
+
+    main {
+        width: 25%;
+    }
+
+    .parcours {
+        width: 70%;
+
     }
 
     .apropos {
         order: -1;
     }
+
+    /* liste loisir */
+
+    p[class*='impression']{
+        left:10px;
+        bottom:40px;
+    }
+    p[class*='jardinage']{
+        bottom:45px;
+        left:110px;
+    }
+    p[class*='marche']{
+        left:160px;
+        bottom:70px;
+    }
+    p[class*='moto']{
+        left:40px;
+    }
+    p[class*='cuisine']{
+        left:70px;
+        bottom:15px;
+    }
+    p[class*='photo']{
+        left:200px;
+        bottom:10px;
+    }
+    p[class*='dessin']{
+        left:10px;
+        top:20px;
+    }
+    /* -------------------------- */
+
 }
