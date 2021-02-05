@@ -1,0 +1,23 @@
+{
+  "name": "sitepersocv",
+  "version": "1.0.0",
+  "description": "site pero",
+  "main": "index.html",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinegallienne/sitePersocv.git"
+  },
+  "author": "Antoine Gallienne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoinegallienne/sitePersocv/issues"
+  },
+  "homepage": "https://github.com/antoinegallienne/sitePersocv#readme"
+}

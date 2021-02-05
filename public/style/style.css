@@ -1,0 +1,400 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "ModernSans-Light";
+  src: url("/public/font/ModernSans-Light.otf") format("opentype"), url("/public/font/ModernSans-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.cv {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.page-contact {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../public/img/haiecv.webp");
+  width: 100%;
+}
+
+header {
+  padding: 3.6vh 0 8vh 2vw;
+}
+
+header h1 {
+  color: #F5F5DC;
+  font-size: 2.5rem;
+  font-family: "ModernSans-Light";
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 span {
+  font-size: 2.3rem;
+  color: #309067;
+  /* Antoine en vert */
+}
+
+.page-contact h3,
+.apropos h3,
+.loisir h3 {
+  font-family: "ModernSans-Light";
+  text-align: left;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #509067;
+  padding: 2vh 0 2vh 2vw;
+}
+
+/*
+.page-contact h3{
+  background-image: url('../../public/img/haie.webp');
+}*/
+.page-contact h4 {
+  color: #F5F5DC;
+}
+
+.page-contact a {
+  color: #F5F5DC;
+  text-decoration: none;
+}
+
+.page-contact a:hover {
+  color: #E6E6E6;
+  /* gris claire */
+}
+
+.adresse,
+.telephone,
+.mail {
+  font-size: 1.1rem;
+  margin: 0 2vw 2vh 2vw;
+}
+
+.page-contact p {
+  margin: 0 2vw 2vh 3vw;
+}
+
+.perso {
+  background-color: #010501;
+  font-family: "ModernSans-Light";
+}
+
+figure {
+  padding-top: 1.9rem;
+}
+
+.page-contact p,
+.apropos p,
+.loisir p {
+  color: #F5F5DC;
+  font-size: 1rem;
+}
+
+.apropos p {
+  margin: 2vh 2vw 0 2vw;
+}
+
+.loisir p {
+  margin: 2vh 2vw 4vh 2vw;
+}
+
+/*------- liste-loisir ----------*/
+.liste-loisir ul {
+  list-style-type: none;
+}
+
+p[class*=impression],
+p[class*=jardinage],
+p[class*=marche],
+p[class*=moto],
+p[class*=cuisine],
+p[class*=photo],
+p[class*=dessin] {
+  position: relative;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #309067;
+}
+
+p[class*=impression] {
+  left: 16vw;
+  bottom: 40px;
+}
+
+p[class*=jardinage] {
+  left: 0;
+  bottom: 10px;
+}
+
+p[class*=marche] {
+  left: 55vw;
+  bottom: 10px;
+}
+
+p[class*=moto] {
+  left: 40vw;
+}
+
+p[class*=cuisine] {
+  left: 25vw;
+  bottom: 15px;
+}
+
+p[class*=photo] {
+  left: 50vw;
+  bottom: 10px;
+}
+
+p[class*=dessin] {
+  left: 10vw;
+  top: 20px;
+}
+
+/* ----- section formation/experience -----*/
+.parcours {
+  color: #223;
+  background-color: #E6EAE7;
+}
+
+.parcours h2 {
+  font-family: "ModernSans-Light";
+  font-size: 2rem;
+  margin: 7vh 2vw 5vh 2vw;
+}
+
+.parcours h3 {
+  box-sizing: content-box;
+  width: 1%;
+  font-family: "ModernSans-Light";
+  text-align: left;
+  margin: 8vh 1rem 5vh 0;
+  padding-right: 2rem;
+}
+
+.formation li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 3vh auto;
+}
+
+.defparcour {
+  padding-left: 2vw;
+  border-left: solid #222 3px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    /* liste loisir */
+  }
+  body .cv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    border: solid red 2px;
+  }
+  body .perso {
+    width: 49%;
+  }
+  body .page-contact {
+    width: 49%;
+  }
+  body .parcours {
+    width: 90%;
+    /* overflow: auto;*/
+  }
+  body .apropos {
+    order: -1;
+  }
+  body p[class*=impression] {
+    left: 0vw;
+    bottom: 140px;
+  }
+  body p[class*=jardinage] {
+    left: 15vw;
+    bottom: 130px;
+  }
+  body p[class*=marche] {
+    left: 15vw;
+    bottom: 160px;
+  }
+  body p[class*=moto] {
+    left: 4vw;
+    top: 20px;
+  }
+  body p[class*=cuisine] {
+    left: 2vw;
+    bottom: 15px;
+  }
+  body p[class*=photo] {
+    left: 5vw;
+    bottom: 50px;
+  }
+  body p[class*=dessin] {
+    left: 20vw;
+    top: 50px;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    /* liste loisir */
+    /* -------------------------- */
+  }
+  body .cv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: auto;
+    /* border: solid yellow 2px;*/
+  }
+  body .perso {
+    width: 30%;
+  }
+  body .page-contact {
+    width: 30%;
+  }
+  body .parcours {
+    width: 40%;
+  }
+  body p[class*=impression] {
+    left: 0px;
+    bottom: 40px;
+  }
+  body p[class*=jardinage] {
+    left: 20px;
+    bottom: 45px;
+  }
+  body p[class*=marche] {
+    left: 15px;
+    bottom: 70px;
+  }
+  body p[class*=moto] {
+    left: 110px;
+  }
+  body p[class*=cuisine] {
+    left: 100px;
+    bottom: 15px;
+  }
+  body p[class*=photo] {
+    left: 55px;
+    bottom: 5px;
+  }
+  body p[class*=dessin] {
+    left: 10px;
+    top: 20px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  body {
+    /* liste loisir */
+    /* -------------------------- */
+  }
+  body .cv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: auto;
+    /*  border: solid green 2px;*/
+  }
+  body .perso {
+    width: 25%;
+  }
+  body .page-contact {
+    width: 25%;
+  }
+  body .parcours {
+    width: 70%;
+  }
+  body .apropos {
+    order: -1;
+  }
+  body p[class*=impression] {
+    left: 10px;
+    bottom: 40px;
+  }
+  body p[class*=jardinage] {
+    bottom: 45px;
+    left: 50px;
+  }
+  body p[class*=marche] {
+    left: 160px;
+    bottom: 70px;
+  }
+  body p[class*=moto] {
+    left: 40px;
+  }
+  body p[class*=cuisine] {
+    left: 70px;
+    bottom: 15px;
+  }
+  body p[class*=photo] {
+    left: 200px;
+    bottom: 10px;
+  }
+  body p[class*=dessin] {
+    left: 10px;
+    top: 20px;
+  }
+}
+
+.page {
+  background-image: url("../../public/img/haie.webp");
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  padding: 10vh 0 0 0;
+}
+
+nav li {
+  display: block;
+}
+
+nav a {
+  color: #576D2E;
+  font-size: 2rem;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.page h2 {
+  width: 10%;
+  padding: 0 0 0 30vw;
+}
+
+.page h2:hover {
+  color: white;
+  animation: shake 1s;
+}
+
+figure img {
+  width: 20rem;
+}
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  body nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

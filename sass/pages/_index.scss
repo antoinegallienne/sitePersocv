@@ -1,0 +1,71 @@
+
+.page{
+	background-image: url('../../public/img/haie.webp');
+    background-attachment: fixed;
+	height: 100vh;
+
+}
+
+nav ul{
+	display:flex;
+	flex-direction: row;
+	width:90%;
+	margin: auto;
+	padding: 10vh 0 0 0;
+	}
+
+nav li {
+	display:block;
+}
+
+nav a{
+	color: #576D2E;
+	font-size: 2rem;
+}
+
+nav a:hover{
+    color: white;
+}
+
+.page h2{
+	width:10%;
+	padding: 0 0 0 30vw;
+}
+
+.page h2:hover{
+	color:white;
+	animation: shake 1s;
+}
+
+figure img{
+	width: 20rem;
+
+}
+
+footer{
+
+}
+
+
+
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+body {
+
+	@include media-min(768px) {
+
+		nav ul {
+			display: flex;
+			flex-direction: row;
+			width: 90%;
+		}
+	}
+
+	@include media-min(1024px) {
+
+
+
+	}
+}
