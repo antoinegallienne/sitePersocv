@@ -49,10 +49,6 @@ h1 span {
   padding: 2vh 0 2vh 2vw;
 }
 
-/*
-.page-contact h3{
-  background-image: url('../../public/img/haie.webp');
-}*/
 .page-contact h4 {
   color: #F5F5DC;
 }
@@ -83,7 +79,7 @@ h1 span {
   font-family: "ModernSans-Light";
 }
 
-figure {
+.perso img {
   padding-top: 1.9rem;
 }
 
@@ -107,7 +103,7 @@ figure {
   list-style-type: none;
 }
 
-p[class*=impression],
+p[class*="impression 3D"],
 p[class*=jardinage],
 p[class*=marche],
 p[class*=moto],
@@ -383,7 +379,7 @@ nav a:hover {
   animation: shake 1s;
 }
 
-figure img {
+.sigleag img {
   width: 20rem;
 }
 
@@ -396,5 +392,26 @@ figure img {
     width: 90%;
   }
 }
+.page-activites {
+  background-image: url("../../public/img/dessin03.webp");
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.photographie h3,
+.cuisine h3,
+.moto h3,
+.dessin h3,
+.jardin h3 {
+  font-size: 1rem;
+  color: #576D2E;
+}
+
+.sigleag img {
+  width: 5rem;
+}
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

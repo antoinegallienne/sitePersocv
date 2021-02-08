@@ -1,0 +1,46 @@
+
+.page-activites{
+	background-image: url('../../public/img/dessin03.webp');
+    background-attachment: fixed;
+	height: 100vh;
+}
+
+.photographie h3,
+.cuisine h3,
+.moto h3,
+.dessin h3,
+.jardin h3{
+	font-size: 1rem;
+	color: #576D2E;
+}
+
+
+.sigleag img{
+	width: 5rem;
+
+}
+
+
+
+
+footer{
+
+}
+
+
+
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+body {
+
+	@include media-min(768px) {
+
+	}
+
+	@include media-min(1024px) {
+
+
+	}
+}

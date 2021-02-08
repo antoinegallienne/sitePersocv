@@ -39,10 +39,6 @@ h1 span {
   color: $h3;
   padding: 2vh 0 2vh 2vw;
 }
-/*
-.page-contact h3{
-  background-image: url('../../public/img/haie.webp');
-}*/
 
 .page-contact h4{
   color: $paragraphe;
@@ -71,7 +67,7 @@ h1 span {
   background-color: $bperso;
   font-family: 'ModernSans-Light';
 }
-figure{
+.perso img{
   padding-top: 1.9rem;
 }
 
@@ -81,6 +77,7 @@ figure{
   color: $paragraphe;
   font-size: 1rem;
 }
+
 .apropos p, {
   margin: 2vh 2vw 0 2vw;
 }
@@ -95,7 +92,7 @@ figure{
   list-style-type: none;
 }
 
-p[class*='impression'],
+p[class*='impression 3D'],
 p[class*='jardinage'],
 p[class*='marche'],
 p[class*='moto'],
