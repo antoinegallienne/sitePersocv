@@ -3,19 +3,53 @@
 	background-image: url('../../public/img/dessin03.webp');
     background-attachment: fixed;
 	height: 100vh;
+	/*opacity: 0.5*/
 }
+.perso-activites{
+	display: grid;
+	grid-template-rows: 2fr 2fr 2fr;
+	grid-template-columns: 2fr 2fr 2fr;
+	align-items: start;
+	column-gap: 1em; /* goutière vertical */
+}
+
+
+.dessin{
+	grid-area: 1/2/2/3;
+}
+.jardin{
+	grid-area: 2/1/3/2;
+}
+.sigleag{
+	grid-area: 2/2/3/3;
+}
+.cuisine{
+	grid-area: 2/3/3/4;
+}
+.photographie{
+	grid-area: 3/2/4/3;
+}
+
 
 .photographie h3,
 .cuisine h3,
-.moto h3,
 .dessin h3,
 .jardin h3{
 	font-size: 1rem;
 	color: #576D2E;
 }
-
+.photographie,
+.cuisine,
+.dessin,
+.jardin{
+	text-align: center;
+	margin: auto;
+}
 
 .sigleag img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	width: 5rem;
 
 }
