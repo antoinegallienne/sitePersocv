@@ -393,19 +393,19 @@ nav a:hover {
   }
 }
 .page-activites {
-  background-image: url("../../public/img/dessin03.webp");
+  background-image: url("../../public/img/bouleau.webp");
   background-attachment: fixed;
-  height: 100vh;
-  /*opacity: 0.5*/
+  height: auto;
 }
 
 .perso-activites {
   display: grid;
-  grid-template-rows: 2fr 2fr 2fr;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  column-gap: 1em;
+  column-gap: 0.1em;
   /* goutière vertical */
+  max-width: 300px;
 }
 
 .dessin {
@@ -428,22 +428,47 @@ nav a:hover {
   grid-area: 3/2/4/3;
 }
 
-.photographie h3,
+.photographie img,
+.cuisine img,
+.dessin img,
+.jardin img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photographie img {
+  width: 10rem;
+}
+
+.cuisine img {
+  width: 8rem;
+}
+
+.dessin img {
+  width: 10rem;
+}
+
+.jardin img {
+  width: 8rem;
+}
+
+/*
 .cuisine h3,
 .dessin h3,
-.jardin h3 {
-  font-size: 1rem;
-  color: #576D2E;
+.jardin h3{
+	font-size: 1rem;
+	color: #576D2E;
 }
 
 .photographie,
 .cuisine,
 .dessin,
-.jardin {
-  text-align: center;
-  margin: auto;
+.jardin{
+	text-align: center;
+	margin: auto;
 }
-
+*/
 .sigleag img {
   display: block;
   margin-left: auto;
