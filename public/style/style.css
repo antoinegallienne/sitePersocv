@@ -392,9 +392,15 @@ nav a:hover {
     width: 90%;
   }
 }
+.activites {
+  width: 100%;
+  margin: auto;
+}
+
 .page-activites {
   background-image: url("../../public/img/bouleau.webp");
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
+  width: auto;
   height: auto;
 }
 
@@ -403,9 +409,12 @@ nav a:hover {
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  column-gap: 0.1em;
+  row-gap: 1.5em;
+  /* goutière horizontal */
+  column-gap: 0.3em;
   /* goutière vertical */
-  max-width: 300px;
+  width: 100%;
+  margin: auto;
 }
 
 .dessin {
@@ -424,35 +433,33 @@ nav a:hover {
   grid-area: 2/3/3/4;
 }
 
-.photographie {
+.photo {
   grid-area: 3/2/4/3;
 }
 
-.photographie img,
+.photo img,
 .cuisine img,
 .dessin img,
 .jardin img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 9rem;
 }
 
-.photographie img {
-  width: 10rem;
+/*
+.photo img{
+	width: 10rem;
 }
-
-.cuisine img {
-  width: 8rem;
+.cuisine img{
+	width: 10rem;
 }
-
-.dessin img {
-  width: 10rem;
+.dessin img{
+	width: 10rem;
 }
-
-.jardin img {
-  width: 8rem;
-}
-
+.jardin img{
+	width: 10rem;
+}*/
 /*
 .cuisine h3,
 .dessin h3,
