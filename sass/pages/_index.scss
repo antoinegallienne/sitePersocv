@@ -1,11 +1,123 @@
 
-.page{
+.page-index{
 	background-image: url('../../public/img/haie.webp');
-    background-attachment: fixed;
-	height: 100vh;
+   /* background-attachment: fixed;*/
+	height: 800px;
+}
+
+.a1 img,
+.a2 img,
+.a3 img,
+.b4 img,
+.sigleag img,
+.b6 img,
+.c7 img,
+.c8 img,
+.c9 img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 5rem;
+}
+
+.b4 a,
+.b6 a,
+.c9 a{
+	font-size: 1.5rem;
+	color: #E6E6E6;
+	text-decoration: none;
 
 }
 
+.perso-index{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+
+	row-gap: 1em; /* goutière horizontal */
+	column-gap: 1em; /* goutière vertical */
+
+	grid-template-areas: 	"a1 a2 a3"
+							"b4 b5 b6"
+							"c7 c8 c9";
+
+	padding: 15vh 5vw 5vh 5vw;
+	margin: auto;
+	width: 1000px;
+
+}
+
+.a1{
+	grid-area: a1;
+	align-self: center;
+	justify-self: center;
+}
+.a2{
+	grid-area: a2;
+	align-self: center;
+	justify-self: center;
+}
+.a3{
+	grid-area: a3;
+	align-self: center;
+	justify-self: center;
+}
+.b4{
+	grid-area: b4;
+	align-self: center;
+	justify-self: center;
+}
+.sigleag{
+	grid-area: b5;
+	align-self: center;
+	justify-self: center;
+}
+.b6{
+	grid-area: b6;
+	align-self: center;
+	justify-self: center;
+}
+.c7{
+	grid-area: c7;
+	align-self: center;
+	justify-self: center;
+}
+.c8{
+	grid-area: c8;
+	align-self: center;
+	justify-self: center;
+}
+.c9{
+	grid-area: c9;
+	align-self: center;
+	justify-self: center;
+}
+
+
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+body {
+
+	@include media-min(768px) {
+
+		nav ul {
+			display: flex;
+			flex-direction: row;
+			width: 90%;
+		}
+	}
+
+	@include media-min(1024px) {
+
+
+
+	}
+}
+
+/*
 nav ul{
 	display:flex;
 	flex-direction: row;
@@ -36,36 +148,4 @@ nav a:hover{
 	color:white;
 	animation: shake 1s;
 }
-
-.sigleag img{
-	width: 20rem;
-
-}
-
-footer{
-
-}
-
-
-
-
-/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
-/* -------------------------------------------------------------------------------*/
-
-body {
-
-	@include media-min(768px) {
-
-		nav ul {
-			display: flex;
-			flex-direction: row;
-			width: 90%;
-		}
-	}
-
-	@include media-min(1024px) {
-
-
-
-	}
-}
+*/

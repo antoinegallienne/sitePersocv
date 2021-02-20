@@ -103,7 +103,8 @@ h1 span {
   list-style-type: none;
 }
 
-p[class*="impression 3D"],
+/*
+p[class*='impression 3D'],*/
 p[class*=jardinage],
 p[class*=marche],
 p[class*=moto],
@@ -342,45 +343,102 @@ p[class*=dessin] {
   }
 }
 
-.page {
+.page-index {
   background-image: url("../../public/img/haie.webp");
-  background-attachment: fixed;
-  height: 100vh;
+  /* background-attachment: fixed;*/
+  height: 800px;
 }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  margin: auto;
-  padding: 10vh 0 0 0;
-}
-
-nav li {
+.a1 img,
+.a2 img,
+.a3 img,
+.b4 img,
+.sigleag img,
+.b6 img,
+.c7 img,
+.c8 img,
+.c9 img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5rem;
 }
 
-nav a {
-  color: #576D2E;
-  font-size: 2rem;
+.b4 a,
+.b6 a,
+.c9 a {
+  font-size: 1.5rem;
+  color: #E6E6E6;
+  text-decoration: none;
 }
 
-nav a:hover {
-  color: white;
+.perso-index {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  row-gap: 1em;
+  /* goutière horizontal */
+  column-gap: 1em;
+  /* goutière vertical */
+  grid-template-areas: "a1 a2 a3" "b4 b5 b6" "c7 c8 c9";
+  padding: 15vh 5vw 5vh 5vw;
+  margin: auto;
+  width: 1000px;
 }
 
-.page h2 {
-  width: 10%;
-  padding: 0 0 0 30vw;
+.a1 {
+  grid-area: a1;
+  align-self: center;
+  justify-self: center;
 }
 
-.page h2:hover {
-  color: white;
-  animation: shake 1s;
+.a2 {
+  grid-area: a2;
+  align-self: center;
+  justify-self: center;
 }
 
-.sigleag img {
-  width: 20rem;
+.a3 {
+  grid-area: a3;
+  align-self: center;
+  justify-self: center;
+}
+
+.b4 {
+  grid-area: b4;
+  align-self: center;
+  justify-self: center;
+}
+
+.sigleag {
+  grid-area: b5;
+  align-self: center;
+  justify-self: center;
+}
+
+.b6 {
+  grid-area: b6;
+  align-self: center;
+  justify-self: center;
+}
+
+.c7 {
+  grid-area: c7;
+  align-self: center;
+  justify-self: center;
+}
+
+.c8 {
+  grid-area: c8;
+  align-self: center;
+  justify-self: center;
+}
+
+.c9 {
+  grid-area: c9;
+  align-self: center;
+  justify-self: center;
 }
 
 /*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
@@ -392,6 +450,38 @@ nav a:hover {
     width: 90%;
   }
 }
+/*
+nav ul{
+	display:flex;
+	flex-direction: row;
+	width:90%;
+	margin: auto;
+	padding: 10vh 0 0 0;
+	}
+
+nav li {
+	display:block;
+}
+
+nav a{
+	color: #576D2E;
+	font-size: 2rem;
+}
+
+nav a:hover{
+    color: white;
+}
+
+.page h2{
+	width:10%;
+	padding: 0 0 0 30vw;
+}
+
+.page h2:hover{
+	color:white;
+	animation: shake 1s;
+}
+*/
 .activites {
   width: 100%;
   margin: auto;
