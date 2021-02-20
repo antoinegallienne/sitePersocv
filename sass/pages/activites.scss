@@ -4,22 +4,24 @@
 	margin: auto;
 }
 
-.page-activites{
+.perso-activites{
 	background-image: url('../../public/img/bouleau.webp');
     /*background-attachment: fixed;*/
-	width: auto;
-	height: auto;
+	height: 800px;
 }
 
 .perso-activites{
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
-	align-items: start;
+	align-items: center;
+
 	row-gap: 1.5em; /* goutière horizontal */
 	column-gap: 0.3em; /* goutière vertical */
-	width: 100%;
+
 	margin: auto;
+	width: 30rem;
+	height: 30rem;
 }
 
 .dessin{
@@ -47,6 +49,39 @@
 	margin-right: auto;
 	width: 9rem;
 }
+
+.sigleag img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 5rem;
+
+}
+
+
+
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+body {
+
+	@include media-min(768px) {
+
+		.perso-activites {
+			width: 40rem;
+			height: 40rem;
+		}
+	}
+	@include media-min(1024px) {
+		.perso-activites {
+			width: 50rem;
+			height: 50rem;
+		}
+	}
+}
+
+
 /*
 .photo img{
 	width: 10rem;
@@ -77,37 +112,3 @@
 	margin: auto;
 }
 */
-
-
-.sigleag img{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 5rem;
-
-}
-
-
-
-
-footer{
-
-}
-
-
-
-
-/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
-/* -------------------------------------------------------------------------------*/
-
-body {
-
-	@include media-min(768px) {
-
-	}
-
-	@include media-min(1024px) {
-
-
-	}
-}

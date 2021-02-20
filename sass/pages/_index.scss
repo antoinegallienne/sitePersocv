@@ -1,5 +1,9 @@
+.index{
+	width: 100%;
+	margin: auto;
+}
 
-.page-index{
+.perso-index{
 	background-image: url('../../public/img/haie.webp');
    /* background-attachment: fixed;*/
 	height: 800px;
@@ -44,7 +48,8 @@
 
 	padding: 15vh 5vw 5vh 5vw;
 	margin: auto;
-	width: 1000px;
+	width: 400px;
+	height: 400px;
 
 }
 
@@ -103,20 +108,21 @@ body {
 
 	@include media-min(768px) {
 
-		nav ul {
-			display: flex;
-			flex-direction: row;
-			width: 90%;
+		.perso-index {
+			width: 800px;
+			height: 800px;
 		}
 	}
-
 	@include media-min(1024px) {
+		.perso-index {
+			width: 1000px;
+			height: 1000px;
 
+		}
 
 
 	}
 }
-
 /*
 nav ul{
 	display:flex;

@@ -6,344 +6,482 @@
   font-style: normal;
 }
 .cv {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   margin: auto;
 }
 
-.page-contact {
+.page-cv {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-self: start;
+  /*
+    row-gap: 1em; /* goutière horizontal */
+  /*
+  column-gap: 1em; /* goutière vertical */
+  grid-template-areas: "a1 " " a2" " a3";
+  padding: 15vh 5vw 5vh 5vw;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+}
+
+.cv-contact {
+  grid-area: a1;
+  /*
+  align-self: center;
+  justify-self: center;*/
+}
+
+.cv-perso {
+  grid-area: a2;
+  /*
+  align-self: center;
+  justify-self: center;*/
+}
+
+.cv-parcours {
+  grid-area: a3;
+  /*
+  align-self: center;
+  justify-self: center;*/
+}
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  body .page-cv {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr auto;
+    justify-self: start;
+    row-gap: 1em;
+    /* goutière horizontal */
+    column-gap: 1em;
+    /* goutière vertical */
+    grid-template-areas: "a1 a2" "a3 a3";
+    padding: 15vh 5vw 5vh 5vw;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+  }
+  body .cv-contact {
+    grid-area: a1;
+    /*
+    align-self: center;
+    justify-self: center;*/
+  }
+  body .cv-perso {
+    grid-area: a2;
+    /*
+    align-self: center;
+    justify-self: center;*/
+  }
+  body .cv-parcours {
+    grid-area: a3;
+    /*
+    align-self: center;
+    justify-self: center;*/
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .page-cv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    justify-self: start;
+    row-gap: 1em;
+    /* goutière horizontal */
+    column-gap: 1em;
+    /* goutière vertical */
+    grid-template-areas: "a1 a2 a3";
+    padding: 15vh 5vw 5vh 5vw;
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+  }
+}
+
+/*
+page-contact  devient   cv-contact
+perso         devient   cv-perso
+parcours      devient   cv-parcours
+
+ */
+/*
+.cv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.cv-contact{
   display: flex;
   flex-direction: column;
-  background-image: url("../../public/img/haiecv.webp");
+  background-image: url('../../public/img/haiecv.webp');
   width: 100%;
 }
 
 header {
-  padding: 3.6vh 0 8vh 2vw;
+    padding: 3.6vh 0 8vh 2vw;
 }
 
 header h1 {
-  color: #F5F5DC;
+  color: $paragraphe;
   font-size: 2.5rem;
-  font-family: "ModernSans-Light";
+  font-family: 'ModernSans-Light';
   font-weight: normal;
   text-transform: uppercase;
   margin: 0;
 }
-
 h1 span {
   font-size: 2.3rem;
-  color: #309067;
-  /* Antoine en vert */
+  color: $h1; /* Antoine en vert */
+/*
 }
-
-.page-contact h3,
+/*
+.cv-contact h3,
 .apropos h3,
-.loisir h3 {
-  font-family: "ModernSans-Light";
+.loisir h3{
+  font-family: 'ModernSans-Light';
   text-align: left;
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: #509067;
+  color: $h3;
   padding: 2vh 0 2vh 2vw;
 }
 
-.page-contact h4 {
-  color: #F5F5DC;
+.cv-contact h4{
+  color: $paragraphe;
 }
 
-.page-contact a {
-  color: #F5F5DC;
+.cv-contact a{
+  color: $paragraphe;
   text-decoration: none;
 }
-
-.page-contact a:hover {
-  color: #E6E6E6;
-  /* gris claire */
+.cv-contact a:hover {
+  color: $hover; /* gris claire */
+/*
 }
-
+/*
 .adresse,
 .telephone,
-.mail {
+.mail{
   font-size: 1.1rem;
   margin: 0 2vw 2vh 2vw;
 }
 
-.page-contact p {
+.cv-contact p {
   margin: 0 2vw 2vh 3vw;
 }
 
-.perso {
-  background-color: #010501;
-  font-family: "ModernSans-Light";
+.cv-perso{
+  background-color: $bperso;
+  font-family: 'ModernSans-Light';
 }
-
-.perso img {
+.cv-perso img{
   padding-top: 1.9rem;
 }
 
-.page-contact p,
+.cv-contact p,
 .apropos p,
-.loisir p {
-  color: #F5F5DC;
+.loisir p{
+  color: $paragraphe;
   font-size: 1rem;
 }
 
-.apropos p {
+.apropos p, {
   margin: 2vh 2vw 0 2vw;
 }
 
-.loisir p {
+.loisir p{
   margin: 2vh 2vw 4vh 2vw;
 }
 
 /*------- liste-loisir ----------*/
+/*
 .liste-loisir ul {
   list-style-type: none;
 }
-
 /*
 p[class*='impression 3D'],*/
-p[class*=jardinage],
-p[class*=marche],
-p[class*=moto],
-p[class*=cuisine],
-p[class*=photo],
-p[class*=dessin] {
+/*
+p[class*='jardinage'],
+p[class*='marche'],
+p[class*='moto'],
+p[class*='cuisine'],
+p[class*='photo'],
+p[class*='dessin'] {
   position: relative;
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: #309067;
+  color: $h1;
 }
 
-p[class*=impression] {
-  left: 16vw;
-  bottom: 40px;
+p[class*='impression']{
+  left:16vw;
+  bottom:40px;
 }
-
-p[class*=jardinage] {
-  left: 0;
-  bottom: 10px;
+p[class*='jardinage']{
+  left:0;
+  bottom:10px;
 }
-
-p[class*=marche] {
-  left: 55vw;
-  bottom: 10px;
+p[class*='marche']{
+  left:55vw;
+  bottom:10px;
 }
-
-p[class*=moto] {
-  left: 40vw;
+p[class*='moto']{
+  left:40vw;
 }
-
-p[class*=cuisine] {
-  left: 25vw;
-  bottom: 15px;
+p[class*='cuisine']{
+  left:25vw;
+  bottom:15px;
 }
-
-p[class*=photo] {
-  left: 50vw;
-  bottom: 10px;
+p[class*='photo']{
+  left:50vw;
+  bottom:10px;
 }
-
-p[class*=dessin] {
-  left: 10vw;
-  top: 20px;
+p[class*='dessin']{
+  left:10vw;
+  top:20px;
 }
-
 /* ----- section formation/experience -----*/
+/*
 .parcours {
-  color: #223;
-  background-color: #E6EAE7;
+  color: $parcour;
+  background-color: $bparcour;
 }
 
-.parcours h2 {
-  font-family: "ModernSans-Light";
+.parcours h2{
+  font-family: 'ModernSans-Light';
   font-size: 2rem;
   margin: 7vh 2vw 5vh 2vw;
 }
 
-.parcours h3 {
+.parcours h3{
   box-sizing: content-box;
   width: 1%;
-  font-family: "ModernSans-Light";
+  font-family: 'ModernSans-Light';
   text-align: left;
   margin: 8vh 1rem 5vh 0;
   padding-right: 2rem;
 }
 
-.formation li {
+.formation li{
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   margin: 3vh auto;
 }
 
-.defparcour {
+.defparcour{
   padding-left: 2vw;
   border-left: solid #222 3px;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    /* liste loisir */
-  }
-  body .cv {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
-    margin: auto;
-    border: solid red 2px;
-  }
-  body .perso {
-    width: 49%;
-  }
-  body .page-contact {
-    width: 49%;
-  }
-  body .parcours {
-    width: 90%;
-    /* overflow: auto;*/
-  }
-  body .apropos {
-    order: -1;
-  }
-  body p[class*=impression] {
-    left: 0vw;
-    bottom: 140px;
-  }
-  body p[class*=jardinage] {
-    left: 15vw;
-    bottom: 130px;
-  }
-  body p[class*=marche] {
-    left: 15vw;
-    bottom: 160px;
-  }
-  body p[class*=moto] {
-    left: 4vw;
-    top: 20px;
-  }
-  body p[class*=cuisine] {
-    left: 2vw;
-    bottom: 15px;
-  }
-  body p[class*=photo] {
-    left: 5vw;
-    bottom: 50px;
-  }
-  body p[class*=dessin] {
-    left: 20vw;
-    top: 50px;
-  }
-}
-@media screen and (min-width: 900px) {
-  body {
-    /* liste loisir */
-    /* -------------------------- */
-  }
-  body .cv {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    margin: auto;
-    /* border: solid yellow 2px;*/
-  }
-  body .perso {
-    width: 30%;
-  }
-  body .page-contact {
-    width: 30%;
-  }
-  body .parcours {
-    width: 40%;
-  }
-  body p[class*=impression] {
-    left: 0px;
-    bottom: 40px;
-  }
-  body p[class*=jardinage] {
-    left: 20px;
-    bottom: 45px;
-  }
-  body p[class*=marche] {
-    left: 15px;
-    bottom: 70px;
-  }
-  body p[class*=moto] {
-    left: 110px;
-  }
-  body p[class*=cuisine] {
-    left: 100px;
-    bottom: 15px;
-  }
-  body p[class*=photo] {
-    left: 55px;
-    bottom: 5px;
-  }
-  body p[class*=dessin] {
-    left: 10px;
-    top: 20px;
-  }
-}
-@media screen and (min-width: 1700px) {
-  body {
-    /* liste loisir */
-    /* -------------------------- */
-  }
-  body .cv {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    margin: auto;
-    /*  border: solid green 2px;*/
-  }
-  body .perso {
-    width: 25%;
-  }
-  body .page-contact {
-    width: 25%;
-  }
-  body .parcours {
-    width: 70%;
-  }
-  body .apropos {
-    order: -1;
-  }
-  body p[class*=impression] {
-    left: 10px;
-    bottom: 40px;
-  }
-  body p[class*=jardinage] {
-    bottom: 45px;
-    left: 50px;
-  }
-  body p[class*=marche] {
-    left: 160px;
-    bottom: 70px;
-  }
-  body p[class*=moto] {
-    left: 40px;
-  }
-  body p[class*=cuisine] {
-    left: 70px;
-    bottom: 15px;
-  }
-  body p[class*=photo] {
-    left: 200px;
-    bottom: 10px;
-  }
-  body p[class*=dessin] {
-    left: 10px;
-    top: 20px;
-  }
+// -----       media query          ----
+// -------------------------------------
+
+body {
+
+    @include media-min(768px) {
+
+       .cv {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 100%;
+            margin: auto;
+            border: solid red 2px;
+        }
+        .cv-perso {
+            width: 49%;
+        }
+        .cv-contact{
+            width: 49%;
+        }
+        .cv-parcours {
+            width: 90%;
+           /* overflow: auto;*/
+/*
 }
 
-.page-index {
+.apropos {
+    order: -1;
+}
+
+/* liste loisir */
+/*
+
+    p[class*='impression'] {
+        left: 0vw;
+        bottom: 140px;
+    }
+    p[class*='jardinage'] {
+        left: 15vw;
+        bottom: 130px;
+    }
+    p[class*='marche'] {
+        left: 15vw;
+        bottom: 160px;
+    }
+    p[class*='moto'] {
+        left: 4vw;
+        top: 20px;
+    }
+    p[class*='cuisine'] {
+        left: 2vw;
+        bottom: 15px;
+    }
+    p[class*='photo'] {
+        left: 5vw;
+        bottom: 50px;
+    }
+    p[class*='dessin'] {
+        left: 20vw;
+        top: 50px;
+    }
+}
+
+@include media-min(900px) {
+
+  .cv {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        margin: auto;
+       /* border: solid yellow 2px;*/
+/*
+}
+
+.cv-perso {
+    width: 30%;
+}
+
+.cv-contact {
+    width: 30%;
+}
+
+.cv-parcours {
+    width: 40%;
+
+}
+
+/* liste loisir */
+/*
+
+p[class*='impression'] {
+    left: 0px;
+    bottom: 40px;
+}
+
+p[class*='jardinage'] {
+    left: 20px;
+    bottom: 45px;
+}
+
+p[class*='marche'] {
+    left: 15px;
+    bottom: 70px;
+}
+
+p[class*='moto'] {
+    left: 110px;
+}
+
+p[class*='cuisine'] {
+    left: 100px;
+    bottom: 15px;
+}
+
+p[class*='photo'] {
+    left: 55px;
+    bottom: 5px;
+}
+
+p[class*='dessin'] {
+    left: 10px;
+    top: 20px;
+}
+
+/* -------------------------- */
+/*
+
+    }
+
+    @include media-min(1700px) {
+
+        .cv {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            max-width: 100%;
+            margin: auto;
+          /*  border: solid green 2px;*/
+/*
+}
+
+.cv-perso {
+    width: 25%;
+}
+
+.cv-contact {
+    width: 25%;
+}
+
+.cv-parcours {
+    width: 70%;
+
+}
+
+.apropos {
+    order: -1;
+}
+
+/* liste loisir */
+/*
+
+p[class*='impression']{
+    left:10px;
+    bottom:40px;
+}
+p[class*='jardinage']{
+    bottom:45px;
+    left:50px;
+}
+p[class*='marche']{
+    left:160px;
+    bottom:70px;
+}
+p[class*='moto']{
+    left:40px;
+}
+p[class*='cuisine']{
+    left:70px;
+    bottom:15px;
+}
+p[class*='photo']{
+    left:200px;
+    bottom:10px;
+}
+p[class*='dessin']{
+    left:10px;
+    top:20px;/*
+}
+/* -------------------------- */
+/*
+    }
+
+}
+*/
+.index {
+  width: 100%;
+  margin: auto;
+}
+
+.perso-index {
   background-image: url("../../public/img/haie.webp");
   /* background-attachment: fixed;*/
   height: 800px;
@@ -384,7 +522,8 @@ p[class*=dessin] {
   grid-template-areas: "a1 a2 a3" "b4 b5 b6" "c7 c8 c9";
   padding: 15vh 5vw 5vh 5vw;
   margin: auto;
-  width: 1000px;
+  width: 400px;
+  height: 400px;
 }
 
 .a1 {
@@ -444,12 +583,18 @@ p[class*=dessin] {
 /*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
 /* -------------------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
-  body nav ul {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
+  body .perso-index {
+    width: 800px;
+    height: 800px;
   }
 }
+@media screen and (min-width: 1024px) {
+  body .perso-index {
+    width: 1000px;
+    height: 1000px;
+  }
+}
+
 /*
 nav ul{
 	display:flex;
@@ -487,24 +632,24 @@ nav a:hover{
   margin: auto;
 }
 
-.page-activites {
+.perso-activites {
   background-image: url("../../public/img/bouleau.webp");
   /*background-attachment: fixed;*/
-  width: auto;
-  height: auto;
+  height: 800px;
 }
 
 .perso-activites {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
+  align-items: center;
   row-gap: 1.5em;
   /* goutière horizontal */
   column-gap: 0.3em;
   /* goutière vertical */
-  width: 100%;
   margin: auto;
+  width: 30rem;
+  height: 30rem;
 }
 
 .dessin {
@@ -537,6 +682,28 @@ nav a:hover{
   width: 9rem;
 }
 
+.sigleag img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5rem;
+}
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  body .perso-activites {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .perso-activites {
+    width: 50rem;
+    height: 50rem;
+  }
+}
+
 /*
 .photo img{
 	width: 10rem;
@@ -566,14 +733,5 @@ nav a:hover{
 	margin: auto;
 }
 */
-.sigleag img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 5rem;
-}
-
-/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
-/* -------------------------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

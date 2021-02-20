@@ -1,10 +1,127 @@
+
+.cv{
+  width: 100%;
+  margin: auto;
+}
+
+.page-cv{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-self: start;
+/*
+  row-gap: 1em; /* goutière horizontal *//*
+  column-gap: 1em; /* goutière vertical */
+
+  grid-template-areas: 	"a1 " " a2" " a3";
+
+  padding: 15vh 5vw 5vh 5vw;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+
+}
+
+
+.cv-contact, {
+  grid-area: a1;/*
+  align-self: center;
+  justify-self: center;*/
+}
+.cv-perso{
+  grid-area: a2;/*
+  align-self: center;
+  justify-self: center;*/
+}
+.cv-parcours{
+  grid-area: a3;/*
+  align-self: center;
+  justify-self: center;*/
+}
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+body {
+
+  @include media-min(768px) {
+
+    .page-cv {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr auto ;
+      justify-self: start;
+
+      row-gap: 1em; /* goutière horizontal */
+      column-gap: 1em; /* goutière vertical */
+
+      grid-template-areas: 	"a1 a2"
+                            "a3 a3";
+
+      padding: 15vh 5vw 5vh 5vw;
+      margin: auto;
+      width: 800px;
+      height: 800px;
+    }
+
+
+    .cv-contact, {
+      grid-area: a1;/*
+  align-self: center;
+  justify-self: center;*/
+    }
+    .cv-perso{
+      grid-area: a2;/*
+  align-self: center;
+  justify-self: center;*/
+    }
+    .cv-parcours{
+      grid-area: a3;/*
+  align-self: center;
+  justify-self: center;*/
+    }
+  }
+
+  @include media-min(1024px) {
+    .page-cv {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      justify-self: start;
+
+      row-gap: 1em; /* goutière horizontal */
+      column-gap: 1em; /* goutière vertical */
+
+      grid-template-areas: 	"a1 a2 a3";
+
+      padding: 15vh 5vw 5vh 5vw;
+      margin: auto;
+      width: 1000px;
+      height: 1000px;
+
+    }
+
+
+  }
+}
+
+
+
+
+
+
+/*
+page-contact  devient   cv-contact
+perso         devient   cv-perso
+parcours      devient   cv-parcours
+
+ *//*
 .cv{
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin: auto;
 }
 
-.page-contact{
+.cv-contact{
   display: flex;
   flex-direction: column;
   background-image: url('../../public/img/haiecv.webp');
@@ -25,10 +142,10 @@ header h1 {
 }
 h1 span {
   font-size: 2.3rem;
-  color: $h1; /* Antoine en vert */
+  color: $h1; /* Antoine en vert *//*
 }
-
-.page-contact h3,
+/*
+.cv-contact h3,
 .apropos h3,
 .loisir h3{
   font-family: 'ModernSans-Light';
@@ -40,18 +157,18 @@ h1 span {
   padding: 2vh 0 2vh 2vw;
 }
 
-.page-contact h4{
+.cv-contact h4{
   color: $paragraphe;
 }
 
-.page-contact a{
+.cv-contact a{
   color: $paragraphe;
   text-decoration: none;
 }
-.page-contact a:hover {
-  color: $hover; /* gris claire */
+.cv-contact a:hover {
+  color: $hover; /* gris claire *//*
 }
-
+/*
 .adresse,
 .telephone,
 .mail{
@@ -59,19 +176,19 @@ h1 span {
   margin: 0 2vw 2vh 2vw;
 }
 
-.page-contact p {
+.cv-contact p {
   margin: 0 2vw 2vh 3vw;
 }
 
-.perso{
+.cv-perso{
   background-color: $bperso;
   font-family: 'ModernSans-Light';
 }
-.perso img{
+.cv-perso img{
   padding-top: 1.9rem;
 }
 
-.page-contact p,
+.cv-contact p,
 .apropos p,
 .loisir p{
   color: $paragraphe;
@@ -87,13 +204,13 @@ h1 span {
 }
 
 /*------- liste-loisir ----------*/
-
+/*
 .liste-loisir ul {
   list-style-type: none;
 }
 /*
 p[class*='impression 3D'],*/
-
+/*
 p[class*='jardinage'],
 p[class*='marche'],
 p[class*='moto'],
@@ -135,7 +252,7 @@ p[class*='dessin']{
   top:20px;
 }
 /* ----- section formation/experience -----*/
-
+/*
 .parcours {
   color: $parcour;
   background-color: $bparcour;
@@ -183,22 +300,22 @@ body {
             margin: auto;
             border: solid red 2px;
         }
-        .perso {
+        .cv-perso {
             width: 49%;
         }
-        .page-contact{
+        .cv-contact{
             width: 49%;
         }
-        .parcours {
+        .cv-parcours {
             width: 90%;
-           /* overflow: auto;*/
+           /* overflow: auto;*//*
         }
 
         .apropos {
             order: -1;
         }
 
-        /* liste loisir */
+        /* liste loisir *//*
 
         p[class*='impression'] {
             left: 0vw;
@@ -238,23 +355,23 @@ body {
             flex-wrap: nowrap;
             max-width: 100%;
             margin: auto;
-           /* border: solid yellow 2px;*/
+           /* border: solid yellow 2px;*//*
         }
 
-        .perso {
+        .cv-perso {
             width: 30%;
         }
 
-        .page-contact {
+        .cv-contact {
             width: 30%;
         }
 
-        .parcours {
+        .cv-parcours {
             width: 40%;
 
         }
 
-        /* liste loisir */
+        /* liste loisir *//*
 
         p[class*='impression'] {
             left: 0px;
@@ -291,7 +408,7 @@ body {
         }
 
         /* -------------------------- */
-
+/*
 
     }
 
@@ -303,18 +420,18 @@ body {
             flex-wrap: nowrap;
             max-width: 100%;
             margin: auto;
-          /*  border: solid green 2px;*/
+          /*  border: solid green 2px;*//*
         }
 
-        .perso {
+        .cv-perso {
             width: 25%;
         }
 
-        .page-contact {
+        .cv-contact {
             width: 25%;
         }
 
-        .parcours {
+        .cv-parcours {
             width: 70%;
 
         }
@@ -323,7 +440,7 @@ body {
             order: -1;
         }
 
-        /* liste loisir */
+        /* liste loisir *//*
 
         p[class*='impression']{
             left:10px;
@@ -350,11 +467,10 @@ body {
         }
         p[class*='dessin']{
             left:10px;
-            top:20px;
+            top:20px;/*
         }
-        /* -------------------------- */
+        /* -------------------------- *//*
     }
 
-
-
 }
+*/
